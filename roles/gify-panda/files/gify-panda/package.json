@@ -1,0 +1,10 @@
+{
+  "name": "gify-panda",
+  "version": "1.0.0",
+  "description": "Static file server",
+  "main": "gify-panda.js",
+  "dependencies": {
+    "finalhandler": "0.5.1",
+    "serve-static": "1.11.2"
+  }
+}

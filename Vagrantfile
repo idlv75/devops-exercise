@@ -26,5 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a base machine 
   config.vm.define "base" do |base|
       base.vm.network :forwarded_port, host: 8088, guest: 8080
+      base.vm.network :forwarded_port, host: 8089, guest: 8089
+      base.vm.network :forwarded_port, host: 8090, guest: 8090	
   end
 end
