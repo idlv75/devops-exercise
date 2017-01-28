@@ -7,9 +7,9 @@ Please read the following instructions before starting to implement your mission
 You'll need a linux machine with the ability to run vms.
 
 1. Make sure you have python 2.7 installed. (Ubuntu 14.04 is highly recommended).
-1. Install Ansible (version 2.1).
-1. Install Vagrant.
-1. Install VirtualBox.
+1. Install Ansible (version 2.1 or higher).
+1. Install Vagrant (version 1.9.1).
+1. Install VirtualBox (version 4.3).
 1. Mirror this git repo using the instructions [here](https://help.github.com/articles/duplicating-a-repository). Then clone it locally. (**Please DO NOT fork the repo**)
 1. Run `vagrant up base` and make sure you can ssh into the machine using `vagrant ssh base`.
 1. Inside the vm execute `nodejs /tmp/bamboo-app/bamboo.js`.
