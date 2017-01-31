@@ -5,4 +5,12 @@
   with_items:
     - nodejs
     - npm
+  register: nodejsInstalled
+
+- name: Replicate nodejs to node (required by pm2)
+  command: /bin/cp /usr/bin/nodejs /usr/bin/node
+  when: nodejsInstalled.changed
+
+- name: Install pm2
+  npm: name=pm2 global=yes production=yes
 

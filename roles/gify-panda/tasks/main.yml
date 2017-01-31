@@ -1,6 +1,9 @@
 ---
 - name: copy gify-panda service
   copy: src=gify-panda dest=/tmp/ owner=root group=root mode=0755
+  register: serviceUpdated
 
 - name: npm install
   npm: path=/tmp/gify-panda
+  when: serviceUpdated.changed
+

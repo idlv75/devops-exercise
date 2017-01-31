@@ -1,0 +1,8 @@
+---
+- name: copy appManager
+  copy: src=appManager dest=/tmp/ owner=root group=root mode=0755
+
+- name: Start ecosystem
+  command: /usr/local/bin/pm2 startOrReload /tmp/appManager/ecosystem.config.js --update-env
+  become: yes
+

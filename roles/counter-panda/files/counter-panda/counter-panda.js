@@ -16,12 +16,14 @@ function handleRequest(request, response){
 
 dispatcher.onGet("/", function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Counted '+postReqCount+' POST requests');
+    res.end('Counted: '+postReqCount+' POST requests');
 });
 
 dispatcher.onPost("/", function(req, res) { 
 	console.log('Counting POST request');
 	postReqCount++;
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.end('200 - The Request Succeeded')
 });
 
 
